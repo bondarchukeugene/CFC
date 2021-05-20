@@ -1,0 +1,10 @@
+digraph unix {
+	node [color=lightblue2 style=filled]
+	size="6,6"
+	"Лицо" -> CompanyB [label=0.01]
+	CompanyB -> "КИК" [label=0.03]
+	"Лицо" -> CompanyA [label=0.03]
+	CompanyA -> "КИК" [label=0.05]
+	CompanyC -> CompanyA [label=0.04]
+	"Лицо" -> CompanyC [label=0.03]
+}
