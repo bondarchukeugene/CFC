@@ -24,5 +24,5 @@ urlpatterns = [
     path('review/', views.checkCompanies ),
 path('generate/', views.generatePDF, name = 'generate' ),
 path('sequence/', views.sequenceSelection, name = 'sequence' ),
-path('delete/', views.delete, name = 'delete' ),
+path('delete/', views.deleteAll, name = 'deleteAll' ),
 ]

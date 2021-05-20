@@ -1,6 +1,5 @@
 digraph unix {
 	node [color=lightblue2 style=filled]
 	size="6,6"
-	"Лицо" -> CompanyB [label=0.03]
-	CompanyB -> "КИК" [label=0.07]
+	CompanyA -> CompanyB [label=0.05]
 }

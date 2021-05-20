@@ -48,7 +48,7 @@ def pdf_view(request):
     except FileNotFoundError:
         raise Http404()
 
-def delete (request):
+def deleteAll (request):
     Possesion.objects.all().delete()
     return redirect("home")
 
