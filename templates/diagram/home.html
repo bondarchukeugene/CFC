@@ -7,18 +7,19 @@
 <body>
 <h1>CFC rules form generator</h1>
 
+
 <form METHOD="post">
     {% csrf_token %}
 
 
-      {% for field in formset  %}
+<!--      {% for field in formset  %}-->
 
-    <br> {{ field.label_tag }} {{ field }} </br>
-  {% endfor %}
+<!--    <br> {{ field.label_tag }} {{ field }} </br>-->
+<!--  {% endfor %}-->
 
 <!--    {{formset.as_p|linebreaks}}-->
 
-<!--    {{ formset.as_p }}-->
+    {{ formset.as_p }}
 
     <button type="submit">Save</button>
 
@@ -29,7 +30,18 @@
 </form>
 
 <form action="{%url 'sequence'%}">
+        <br>
+    <input type="text" name="start"> Start
+    <br>
+
+    <br>
+    <input type="text" name="end"> End
+    <br>
     <input type="submit" value="Sequence" class="btn btn-primary">
+</form>
+
+<form action="{%url 'delete'%}">
+    <input type="submit" value="Delete all" class="btn btn-primary">
 </form>
 
 </body>

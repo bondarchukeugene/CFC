@@ -48,11 +48,18 @@ def pdf_view(request):
     except FileNotFoundError:
         raise Http404()
 
+def delete (request):
+    Possesion.objects.all().delete()
+    return redirect("home")
+
 def sequenceSelection (request):
+
+    start = request.GET.get('start')
+    end = request.GET.get('end')
 
     sequence = Sequence()
     graph = sequence.getGraphDisct()
-    paths = sequence.find_all_paths(graph,'Лицо','КИК')
+    paths = sequence.find_all_paths(graph,start,end)
 
     for path in paths:
         share = sequence.shareCalculations(path)

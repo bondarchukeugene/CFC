@@ -19,9 +19,10 @@ from diagram import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path ('home/',views.home),
+    path ('home/',views.home,name = 'home'),
     path ('pdf/',views.pdf_view,name = 'pdf'),
     path('review/', views.checkCompanies ),
 path('generate/', views.generatePDF, name = 'generate' ),
 path('sequence/', views.sequenceSelection, name = 'sequence' ),
+path('delete/', views.delete, name = 'delete' ),
 ]
